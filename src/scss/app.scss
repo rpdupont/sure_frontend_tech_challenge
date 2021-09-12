@@ -1,0 +1,65 @@
+@import 'partials/reset';
+@import 'partials/variables';
+@import 'partials/mixins';
+
+@import 'partials/default';
+@import 'partials/forms';
+
+.user,
+.address{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.quote-overview{
+    width: 100%;
+    max-width: cRems(1040px);
+    margin: 0 auto;
+}
+
+.quote-info{
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .description{
+        width: 60%;
+
+        @include medium {
+            width: 75%;
+        }
+
+        .premium{
+            text-align: right;
+        }
+    }
+
+    .value{
+        width: 40%;
+        padding-left: cRems(20px);
+
+        @include medium {
+            width: 25%;
+        }
+
+        button{
+            margin-right: 0;
+            margin-left: 0;
+        }
+    }
+
+    &.premium{
+        .value{
+            h3{
+                width: cRems(188px);
+                text-align: right;
+            }
+        }
+    }
+}
+
+.hidden{
+    display: none;
+}

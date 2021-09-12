@@ -1,0 +1,116 @@
+form{
+
+    p{
+        text-align: center;
+
+        &.error{
+            color: $colorError;
+        }
+    }
+
+    &.disable{
+        pointer-events: none;
+
+        button{
+            display: none;
+        }
+
+        .field{
+            .label{
+                .span{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.field{
+    margin: cRems(8px);
+
+    label{
+        font-size: cRems(24px);
+
+        @include medium {
+            font-size: cRems(16px);
+        }
+
+        span{
+            font-size: 0.75em;
+        }
+    }
+
+    input{
+        display: block;
+        font-size: cRems(24px);
+        color: $colorWhite;
+        background: transparent;
+        border: none;
+        border-bottom: 3px solid $colorWhite;
+        padding: cRems(4px) cRems(8px);
+        margin: cRems(8px) 0;
+        outline: none;
+    }
+
+    &.error{
+        label{
+            color: $colorError;
+        }
+        input{
+            border-bottom-color: $colorError;
+        }
+    }
+}
+
+.select-wrapper{
+    position: relative;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+    &::after{
+        position: relative;
+        right: cRems(24px);
+        display: inline-block;
+        font-style: normal;
+        font-variant: normal;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        content: "\f13a";
+        pointer-events: none;
+    }
+}
+
+select{
+    appearance: none;
+    font-size: cRems(28px);
+    color: $colorWhite;
+    background: transparent;
+    border: none;
+    min-width: cRems(220px);
+    padding: cRems(4px) cRems(32px) cRems(4px) 0;
+    margin: cRems(8px) 0;
+    outline: none;
+    text-align-last: right;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: $colorOrange;
+    font-size: 1.5rem;
+    font-weight: $bold;
+    color: $colorWhite;
+    padding: .75rem 1rem;
+    border: 1px solid $colorWhite;
+    border-radius: cRems(4px);
+    margin: 0 auto cRems(32px);
+
+    &:disabled{
+        background: $colorGrey;
+        opacity: 0.5;
+    }
+}

@@ -1,0 +1,65 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+html,
+body {
+    font-size: 2.5vw; 
+
+    @include medium {
+        font-size: $medium;
+    }
+    @include large {
+        font-size: 16px;
+    }
+}
+
+body{
+    font-family: $fontArial;
+    color: $colorWhite;
+    background-color: $colorBlue;
+    margin: 0;
+}
+
+#root{
+    width: 100%;
+    max-width: $large;
+    margin: 0 auto;
+    padding: cRems(16px) cRems(16px) cRems(560px);
+    background: url(../../img/space.jpg) no-repeat bottom center transparent;
+    background-size: cRems(880px) auto;
+}
+
+hr{
+    height: 2px;
+    margin: 0 auto cRems(30px);
+    background-color: $colorGrey;
+    border: none;
+}
+
+h2{
+    font-size: cRems(42px);
+    color: $colorYellow;
+    padding-bottom: cRems(20px);
+    text-align: center;
+
+    @include medium {
+        font-size: cRems(32px);
+    }
+}
+
+h3{
+    font-size: cRems(28px);
+    color: $colorOrange;
+    padding-bottom: cRems(20px);
+}
+
+p{
+    font-size: cRems(24px);
+    padding-bottom: cRems(20px);
+
+    @include medium {
+        font-size: cRems(16px);
+    }
+}

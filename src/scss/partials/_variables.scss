@@ -1,0 +1,22 @@
+//COLORS
+$colorBlack: #000000;
+$colorWhite: #ffffff;
+$colorYellow: #f8e646;
+$colorOrange: #d5935a;
+$colorGrey: #adadab;
+$colorBlue: #293d48;
+$colorRed: #ff7b7b;
+
+$colorError: $colorRed;
+
+//FONTS
+$fontArial: Arial, verdana, sans-serif;
+
+//WEIGHTS
+$regular: 400;
+$bold: 700;
+
+//SIZES
+$base_font_size: 16px;
+$large: 1000px;//this should be the same as the max-width of your content
+$medium: (($base_font_size/$large)*100) + vw;
